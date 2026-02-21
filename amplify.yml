@@ -1,15 +1,17 @@
----
 version: 1
 
 frontend:
   phases:
     build:
       commands:
-        - echo "No build step required"
+        - echo "Building static site - no compilation required"
 
   artifacts:
-    baseDirectory: .
+    baseDirectory: ./
     files:
       - '**/*'
+
   cache:
-    paths: []
+    paths:
+      - node_modules/**/*
+      - .cache/**
